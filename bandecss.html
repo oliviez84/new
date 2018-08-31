@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Images</title>
+    <style>
+
+        :root {
+            --width: 800px;
+            --tiers: calc(var(--width) / 4);
+            --image:url(https://picsum.photos/800/300);
+            /* --image:url(CAKE.jpg); */
+
+        }
+        .flex {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+        }
+        /* img {
+            max-width: 100%;
+        } */
+    .img {
+        position: relative;
+        background:var(--image);
+        background-repeat: no-repeat;
+        margin: auto;
+        width: var(--width);
+        height: 300px;
+         overflow: hidden;
+    }
+
+ 
+
+    .first1 {
+        position: absolute;
+        top:0;
+        left:  calc(var(--tiers) - var(--tiers) * 2);
+        display: inline-block;
+        height: 100%;
+        width: var(--tiers);
+        background: var(--image) 0% 0%;
+        background-repeat: no-repeat;
+    }
+    .first2 {
+        position: absolute;
+        top:0;
+        left:25%;
+        display: inline-block;
+        height: 100%;
+        background: var(--image) 33.3% 0%;
+        background-repeat: no-repeat;
+    }
+    .first3 {
+        position: absolute;
+        top:0;
+        left:50%;
+        display: inline-block;
+        height: 100%;
+        /* width: var(--tiers); */
+        background: var(--image) 66.6% 0%;
+        background-repeat: no-repeat;
+    }
+    .first4 {
+        position: absolute;
+        top:0;
+        left:75%;
+        display: inline-block;
+        height: 100%;
+        background: var(--image) 100% 0%;
+        background-repeat: no-repeat;
+    }
+   
+
+    @keyframes reduc {
+        0% {width: 0%}
+        100% {width:var(--tiers)}
+    }
+    @keyframes reduc2 {
+        0% {transform: translatex(0%)}
+       100% {transform: translatex(100%)}
+    }
+    .over {
+       animation: reduc .700s ease-out;
+       
+    }
+    .over2 {
+        animation: reduc2 .700s ease-out;
+       
+    }
+    .btn {
+        display: flex;
+        width: 20%;
+        margin: 10px auto;
+        justify-content: center;
+    }
+    /* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    
+   
+    </style>
+</head>
+<body>
+    
+    <div class="flex">
+ 
+    <div class="img ">
+        <div class="first1"></div>
+        <div class="first2"></div>
+        <div class="first3"></div>
+        <div class="first4"></div>
+   </div>
+    <button id="but" class="btn">passez votre souris</button>
+   </div>
+
+   <!-- //////////////////////////////////////////////////////////////////////////////////////// -->
+
+    
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+              crossorigin="anonymous"></script>
+              <script>
+              $(document).ready(function(){
+
+                    $('#but').mouseover(function(){
+                      $('.first1').addClass('over2')
+                      $('.first2').addClass('over')
+                      $('.first3').addClass('over')
+                      $('.first4').addClass('over')
+                  })
+                  $('#but').mouseleave(function(){
+                    $('.first1').removeClass('over2')
+                      $('.first2').removeClass('over')
+                      $('.first3').removeClass('over')
+                      $('.first4').removeClass('over')
+                  })
+
+
+
+               
+              })
+              </script>
+</body>
+</html>

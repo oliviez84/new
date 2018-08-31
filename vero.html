@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body, html {
+            box-sizing: border-box;
+        
+        }
+
+    .flex {
+        display: flex;
+        flex-flow: row wrap;
+        /* width: 100%; */
+      
+
+    }
+    .header-logo {
+        min-width: 30%;
+        width: calc((600px - 100%)*1000);
+        max-width: 100%;
+    }
+    .main-intro {
+        min-width: 30%;
+        width: calc((800px - 100%)*1000);
+        max-width: 100%; 
+    }
+
+
+    .header-logo img {
+        width: 100%;
+    }
+    .header-titre {
+        display: flex;
+        min-width: 70%;
+        width: calc((600px - 100%)*1000);
+        max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+    }
+    .photo {
+        display: flex;
+        min-width: 70%;
+        width: calc((800px - 100%)*1000);
+        max-width: 100%;
+        justify-content: center;
+        margin: auto ;
+        
+    }
+    .photo img{
+    
+        width: 100%;
+    }
+    ul  {
+        list-style: none;
+        padding: 0;
+          margin: 0;
+    }
+
+    .photo ul  {
+        position: relative;
+        min-width: 50%;
+        width: calc((800px - 100%)*1000);
+        max-width: 100%;
+        
+    }
+   
+   
+    .legende {
+	background: #fff;
+	grid-column: 1 / -1;
+	grid-row: 2;
+	transition: all 1s;
+	width: 100%;
+  
+}
+.legende h3, .legende p {
+	/* padding: .5rem 0; */
+	text-align: center;
+	width: 100%;
+}
+
+
+@media screen and (min-width: 1200px) {
+	.legende {
+		background: black;
+		grid-row: 1;
+		height: 100%;
+		opacity: 0;
+        color: white;
+	}
+	figure:hover .legende {
+		opacity: .8;
+	}
+    #page {
+   height: 100vh;
+}
+	/* figcaption a i {
+		background: #ccc;	
+	}
+	figcaption a i:before {
+		color: red;
+	}
+	 */
+}
+.grid {
+	display: grid;
+	grid-gap: 0;
+	grid-template-columns: repeat(12, 1fr);
+	/* justify-items: center; */
+	/* align-items: center; */
+}
+img {
+	grid-column: 1 / -1;
+	grid-row: 1;
+}
+
+
+.noir {
+ 
+ grid-column: span 12;
+display: flex;
+justify-content: space-around;
+ background: orange;
+padding: 10px 0 0 0;
+}
+
+.mon-image {
+ 
+width: 5%;
+}
+.mon-image img {
+    width: 100%;
+}
+h1 {
+    font-size: 5rem;
+}
+.texte {
+    display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div id="page">
+    <header class="flex">
+        <div class="header-logo">
+            <img src="https://picsum.photos/g/300/100" alt="">
+        </div>
+    <div class="header-titre">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+    </div>
+    </header>
+<main class="flex">
+    
+        <div class="main-intro">
+            <h1 class="texte">mon titre</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti praesentium aspernatur eligendi reprehenderit exercitationem expedita culpa ex voluptatibus quos quis quidem eveniet doloribus deserunt repudiandae pariatur eos odio, recusandae et.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti praesentium aspernatur eligendi reprehenderit exercitationem expedita culpa ex voluptatibus quos quis quidem eveniet doloribus deserunt repudiandae pariatur eos odio, recusandae et.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti praesentium aspernatur eligendi reprehenderit exercitationem expedita culpa ex voluptatibus quos quis quidem eveniet doloribus deserunt repudiandae pariatur eos odio, recusandae et.</p>
+        </div>
+        <div class="photo flex">
+  
+    <ul>
+         <li>
+                <figure class="grid">
+                    <img src="https://images.unsplash.com/photo-1515010134037-9c96ac6506ae?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=5b37fa74ab2a1494958efa855c1fd1f6" alt=""  >
+                   
+                    <div class="flex legende">
+                        <h3>Lorem ipsum</h3>
+                        <p>dolor sit amet</p>
+                        <p>dolor sit amet</p>
+                        <p>dolor sit amet</p>
+                    </div>
+                    <div class="noir">
+                        <div class="mon-image">
+                            <img src="protection amelioration blanc2.png" alt="" >
+                        </div>
+                        <p>Lorem ipsum dolor </p>
+                        <p>Lorem ipsum dolor </p>
+
+                        <div class="mon-image">
+                                <img src="protection amelioration blanc2.png" alt="" >
+                            </div>
+                        
+                    </div> 
+                </figure>
+         
+            </li>
+           
+        </ul>
+
+    <ul>
+         <li>
+                <figure class="grid">
+                    <img src="https://images.unsplash.com/photo-1515010134037-9c96ac6506ae?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=5b37fa74ab2a1494958efa855c1fd1f6" alt="" width="100%" >
+                    <div class="flex legende">
+                            <h3>Lorem ipsum</h3>
+                            <p>dolor sit amet</p>
+                            <p>dolor sit amet</p>
+                            <p>dolor sit amet</p>
+                        </div>
+                        <div class="noir">
+                            <div class="mon-image">
+                                <img src="protection amelioration blanc2.png" alt="" >
+                            </div>
+                            <p>Lorem ipsum dolor </p>
+                            <div class="mon-image">
+                                    <img src="protection amelioration blanc2.png" alt="" >
+                                </div>
+                            
+                        </div> 
+                    </figure>
+            </li>
+        </ul>
+    <ul>
+         <li>
+                <figure class="grid">
+                    <img src="https://images.unsplash.com/photo-1515010134037-9c96ac6506ae?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=5b37fa74ab2a1494958efa855c1fd1f6" alt="" >
+                    <div class="flex legende">
+                            <h3>Lorem ipsum</h3>
+                            <p>dolor sit amet</p>
+                            <p>dolor sit amet</p>
+                            <p>dolor sit amet</p>
+                        </div>
+                        <div class="noir">
+                            <div class="mon-image">
+                                <img src="protection amelioration blanc2.png" alt="" >
+                            </div>
+                            <p>Lorem ipsum dolor </p>
+                            <div class="mon-image">
+                                    <img src="protection amelioration blanc2.png" alt="" >
+                                </div>
+                            
+                        </div> 
+                    </figure>
+            </li>
+        </ul>
+    <ul>
+         <li>
+                <figure class="grid">
+                    <img src="https://images.unsplash.com/photo-1515010134037-9c96ac6506ae?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=5b37fa74ab2a1494958efa855c1fd1f6" alt="" >
+                    <div class="flex legende">
+                            <h3>Lorem ipsum</h3>
+                            <p>dolor sit amet</p>
+                            <p>dolor sit amet</p>
+                            <p>dolor sit amet</p>
+                        </div>
+                        <div class="noir">
+                            <div class="mon-image">
+                                <img src="protection amelioration blanc2.png" alt="" >
+                            </div>
+                            <p>Lorem ipsum dolor </p>
+                            <div class="mon-image">
+                                    <img src="protection amelioration blanc2.png" alt="" >
+                                </div>
+                            
+                        </div> 
+                    </figure>
+            </li>
+        </ul>
+
+</div>
+    </main>
+    <footer>
+
+    </footer>
+</div>
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+<!-- <script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+              crossorigin="anonymous"></script>
+              <script>
+              $(document).ready(function(){
+$('.photo img').mouseover(function(){
+    $('.on').slideDown(1000)
+
+})
+$('.photo img').mouseleave(function(){
+    $('.cacher').slideUp(1000)
+})
+
+ })
+              </script> -->
+</body>
+</html>
