@@ -28,7 +28,7 @@ var nb = 2
 
    
 
-    $('#val').click(function(){
+    $('#valide').click(function(){
  
      
   var $tiers= $taille / nb
@@ -45,7 +45,7 @@ var nb = 2
 
     $('.group').append('<div class="band band0" style="left: '+$depart+';width:'+$tiers1+';height:'+$hauteur+';background: url('+$link+') 0% 0;"></div>')
   
-    $('.band0').animate({left:"0px"},700)  
+    $('.band0').stop().animate({left:"0px"},700)  
 
     for(var i =1;i < nb; i++){
         
