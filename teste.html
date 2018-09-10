@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .grid {
+        /* position: relative; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 100vh;
+      
+    }
+    .wrap {
+      
+        grid-column: 2;
+        grid-row: 2;
+      
+    }
+    .wrap img{
+        width: 100%;
+    }
+    section {
+        display: flex;
+        opacity: 0;
+      margin: 0;
+        width: 100%;
+        background: lightgray;
+        height: 164px;
+        text-align: center;
+        transition: opacity 1s;
+    }
+   section:hover {
+        opacity: 0.8;
+        transition: opacity 1s;
+    }
+    </style>
+</head>
+<body>
+    <div class="grid">
+       
+        <div class="wrap">
+            <img src="CAKE.jpg" alt="">
+        </div>
+      
+    <section class="wrap">
+        <h2>le titre</h2>
+      <p>bonjour</p>
+      <p>bonjour</p>
+      </section>
+        </div>
+   
+    
+</body>
+</html>
