@@ -10,27 +10,7 @@
 </head>
 <body>
    
-            <script type="text/javascript">
-                    function loadFile(o)
-                    {
-                        var fr = new FileReader();
-                        fr.onload = function(e)
-                            {
-                                showDataFile(e, o);
-                            };
-                        fr.readAsText(o.files[0]);
-                    }
-    
-                    function showDataFile(e, o)
-                    {
-                        document.getElementById("data").innerText = e.target.result;
-                    }
-                </script>
-    
-            </script>
-   
-            Select file to read <input type="file" onchange="loadFile(this)">
-            <pre id="data"></pre>
+        
   
  <div class="page">
         <div class="effet">
@@ -61,6 +41,28 @@
         </div>
          </div>
         </div>
+
+        <script type="text/javascript">
+            function loadFile(o)
+            {
+                var fr = new FileReader();
+                fr.onload = function(e)
+                    {
+                        showDataFile(e, o);
+                    };
+                fr.readAsText(o.files[0]);
+            }
+
+            function showDataFile(e, o)
+            {
+                document.getElementById("data").innerText = e.target.result;
+            }
+        </script>
+
+    </script>
+
+    Select file to read <input type="file" onchange="loadFile(this)">
+    <pre id="data"></pre>
 <!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
 <script
 src="https://code.jquery.com/jquery-3.3.1.js"
